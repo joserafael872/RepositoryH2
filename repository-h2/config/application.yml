@@ -1,0 +1,8 @@
+controller:
+  base-path: /repository
+  insert-data: /insert-data
+  get-data: /get-data/{nombre}
+  
+server:
+  port: 2220
+  
