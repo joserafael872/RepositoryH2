@@ -5,4 +5,10 @@ controller:
   
 server:
   port: 2220
-  
+
+eureka:
+  client:
+    enabled: true
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/    
