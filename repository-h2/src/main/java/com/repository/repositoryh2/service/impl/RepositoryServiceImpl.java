@@ -13,7 +13,7 @@ import com.repository.repositoryh2.models.CustomerAccounst;
 import com.repository.repositoryh2.models.CustomerResponse;
 import com.repository.repositoryh2.service.RepositoryService;
 
-@Service
+@Service("RepositoryServiceImpl")
 public class RepositoryServiceImpl implements RepositoryService {
 
 	@Autowired

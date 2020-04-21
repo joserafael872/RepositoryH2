@@ -1,7 +1,7 @@
 controller:
   base-path: /repository
   insert-data: /insert-data
-  get-data: /get-data/{nombre}
+  get-data: /get-data
   
 server:
   port: 2220
