@@ -20,7 +20,7 @@ public class RepositoryServiceImpl implements RepositoryService {
 	private EntityTableRepository entityRepository;
 
 	@Override
-	public void putCustomer(Customer dataCustomer) {
+	public void insertCustomer(Customer dataCustomer) {
 
 		UserEntityTable userData = new UserEntityTable();
 		userData.setNombre(dataCustomer.getNombre());

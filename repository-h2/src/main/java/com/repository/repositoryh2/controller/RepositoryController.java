@@ -28,7 +28,7 @@ public class RepositoryController {
 	@PostMapping("${controller.insert-data}")
 	public ResponseEntity<String> insertDataCustomer(@RequestBody Customer dataRequest){
 		
-		service.putCustomer(dataRequest);
+		service.insertCustomer(dataRequest);
 		
 		return new ResponseEntity<>(HttpStatus.OK);		
 	}
@@ -36,8 +36,6 @@ public class RepositoryController {
 	@GetMapping("${controller.get-data}")
 	public CustomerResponse getCustomer(@PathVariable("nombre") String nombre){
 		
-		CustomerResponse response = service.getCustomerByName(nombre);
-		
-		return response;		
+		return service.getCustomerByName(nombre);		
 	}
 }
