@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.repository.repositoryh2.entity.EntityTableRepository;
 import com.repository.repositoryh2.entity.UserEntityTable;
-import com.repository.repositoryh2.models.Customer;
+import com.repository.repositoryh2.models.CustomerData;
 import com.repository.repositoryh2.models.CustomerAccounst;
 import com.repository.repositoryh2.models.CustomerResponse;
 import com.repository.repositoryh2.service.RepositoryService;
@@ -20,7 +20,7 @@ public class RepositoryServiceImpl implements RepositoryService {
 	private EntityTableRepository entityRepository;
 
 	@Override
-	public void insertCustomer(Customer dataCustomer) {
+	public void insertCustomer(CustomerData dataCustomer) {
 
 		UserEntityTable userData = new UserEntityTable();
 		userData.setNombre(dataCustomer.getNombre());
@@ -28,8 +28,8 @@ public class RepositoryServiceImpl implements RepositoryService {
 		userData.setSexo(dataCustomer.getSexo());
 		userData.setFechaNac(dataCustomer.getFechaNac());
 		userData.setNumCuenta(dataCustomer.getNumCuenta());
-		userData.setProducto(dataCustomer.getSaldo());
-		userData.setSaldo(dataCustomer.getProducto());
+		userData.setProducto(dataCustomer.getProducto());
+		userData.setSaldo(dataCustomer.getSaldo());
 		
 		entityRepository.save(userData);
 	}
